@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- libreria.xml -->
 <!DOCTYPE libreria [
-  <!ELEMENT libreria (book+)>
-  <!ELEMENT libro (autor, autor+, categoria*, lenguaje?, anyo?, edicion?, precio)>
-    <!ATTLIST libro ISBN CDATA #REQUIRED>
-  <!ELEMENT titulo    (#PCDATA)>
-  <!ELEMENT autor   (#PCDATA)>
-  <!ELEMENT categoria (#PCDATA)>
-  <!ELEMENT lenguaje (#PCDATA)>
-  <!ELEMENT anyo     (#PCDATA)>
-  <!ELEMENT edicion  (#PCDATA)>
-  <!ELEMENT precio    (#PCDATA)>
-]>
+        <!ELEMENT libreria (libro+)>
+        <!ELEMENT libro (titulo, autor+, categoria*, lenguaje?, anyo?, edicion?, precio)>
+        <!ATTLIST libro ISBN CDATA #REQUIRED>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT autor (#PCDATA)>
+        <!ELEMENT categoria (#PCDATA)>
+        <!ELEMENT lenguaje (#PCDATA)>
+        <!ELEMENT anyo (#PCDATA)>
+        <!ELEMENT edicion (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+        ]>
 <libreria>
   <libro ISBN="0123456001">
     <titulo>AAD1</titulo>
