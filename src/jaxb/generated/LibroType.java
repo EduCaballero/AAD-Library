@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
+//Probando pushear en nueva branch
 /**
  * <p>Clase Java para libroType complex type.
  * 
@@ -107,6 +107,26 @@ public class LibroType {
     protected float precio;
     @XmlAttribute(name = "ISBN", required = true)
     protected int isbn;
+
+
+    public LibroType(String titulo, List<String> autor, List<String> categoria, String lenguaje, short anyo, Byte edicion, float precio, int isbn) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.categoria = categoria;
+        this.lenguaje = lenguaje;
+        this.anyo = anyo;
+        this.edicion = edicion;
+        this.precio = precio;
+        this.isbn = isbn;
+    }
+
+    public LibroType(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public LibroType() {
+
+    }
 
     /**
      * Obtiene el valor de la propiedad titulo.
@@ -286,4 +306,11 @@ public class LibroType {
         this.isbn = value;
     }
 
+
+    @Override
+    public String toString() {
+        return "LibroType{" +
+                "titulo='" + titulo + '\'' +
+                '}';
+    }
 }
